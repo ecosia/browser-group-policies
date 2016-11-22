@@ -1,0 +1,93 @@
+CLASS USER
+CATEGORY !!WindowsComponents
+CATEGORY !!InternetExplorer
+
+POLICY !!PopulateSearchProviderList
+	#if version >= 4
+	SUPPORTED !!SUPPORTED_IE7
+	#endif
+	EXPLAIN !!IE_Explain_PopulateSearchProviderList
+	KEYNAME "Software\Policies\Microsoft\Internet Explorer\SearchScopes"
+	PART "Ecosia"
+		CHECKBOX VALUENAME EcosiaCheck
+		ACTIONLISTON
+			KEYNAME "Software\Policies\Microsoft\Internet Explorer\SearchScopes\{768c2224-8616-4617-8fbf-6715dab7bc28}"
+			VALUENAME DisplayName VALUE "Ecosia"
+			VALUENAME URL VALUE "https://www.ecosia.org/search?q={searchTerms}&addon=iegpo"
+			VALUENAME FaviconURL VALUE "https://cdn.ecosia.org/assets/images/ico/favicon.ico"
+			VALUENAME SuggestionsURL VALUE "http://api.bing.com/qsml.aspxhttp://api.bing.com/qsml.aspx?query={searchTerms}&maxwidth={ie:maxWidth}&rowheight={ie:rowHeight}&sectionHeight={ie:sectionHeight}&market={language}"
+		END ACTIONLISTON
+	END PART
+
+	PART "Bing"
+		CHECKBOX VALUENAME BingCheck
+		ACTIONLISTON
+			KEYNAME "Software\Policies\Microsoft\Internet Explorer\SearchScopes\{c57fc1ec-c39c-45a0-90d2-80423a969d1a}"
+			VALUENAME DisplayName VALUE "Bing"
+			VALUENAME FaviconURL VALUE "http://www.bing.com/favicon.ico"
+			VALUENAME FaviconURLFallback VALUE "http://www.bing.com/favicon.ico"
+			VALUENAME NTLogoPath VALUE "C:\Users\IEUser\AppData\LocalLow\Microsoft\Internet Explorer\Services\"
+			VALUENAME NTLogoURL VALUE "http://go.microsoft.com/fwlink/?LinkID=403856&language={language}&scale={scalelevel}&contrast={contrast}"
+			VALUENAME NTSuggestionsURL VALUE "http://api.bing.com/qsml.aspxhttp://api.bing.com/qsml.aspx?query={searchTerms}&market={language}&maxwidth={ie:maxWidth}&rowheight={ie:rowHeight}&sectionHeight={ie:sectionHeight}&FORM=IENTSS"
+			VALUENAME NTTopResultURL VALUE "http://www.bing.com/search?q={searchTerms}&src=IE-SearchBox&FORM=IENTTR"
+			VALUENAME NTURL VALUE "http://www.bing.com/search?q={searchTerms}&src=IE-SearchBox&FORM=IENTSR"
+			VALUENAME SuggestionsURL VALUE "http://api.bing.com/qsml.aspxhttp://api.bing.com/qsml.aspx?query={searchTerms}&maxwidth={ie:maxWidth}&rowheight={ie:rowHeight}&sectionHeight={ie:sectionHeight}&FORM=IESS02&market={language}"
+			VALUENAME SuggestionsURLFallback VALUE "http://api.bing.com/qsml.aspxhttp://api.bing.com/qsml.aspx?query={searchTerms}&maxwidth={ie:maxWidth}&rowheight={ie:rowHeight}&sectionHeight={ie:sectionHeight}&FORM=IESS02&market={language}"
+			VALUENAME TopResultURL VALUE "http://www.bing.com/search?q={searchTerms}&src=IE-TopResult&FORM=IETR02"
+			VALUENAME TopResultURLFallback VALUE "http://www.bing.com/search?q={searchTerms}&src=IE-TopResult&FORM=IETR02"
+			VALUENAME URL VALUE "http://www.bing.com/search?q={searchTerms}&src=IE-SearchBox&FORM=IESR02"
+		END ACTIONLISTON
+END PART
+END POLICY
+END CATEGORY
+END CATEGORY
+
+CLASS MACHINE
+CATEGORY !!WindowsComponents
+CATEGORY !!InternetExplorer
+POLICY !!PopulateSearchProviderList
+	#if version >= 4
+	SUPPORTED !!SUPPORTED_IE7
+	#endif
+	EXPLAIN !!IE_Explain_PopulateSearchProviderList
+	KEYNAME "Software\Policies\Microsoft\Internet Explorer\SearchScopes"
+	PART "Ecosia"
+		CHECKBOX VALUENAME EcosiaCheck
+		ACTIONLISTON
+			KEYNAME "Software\Policies\Microsoft\Internet Explorer\SearchScopes\{768c2224-8616-4617-8fbf-6715dab7bc28}"
+			VALUENAME DisplayName VALUE "Ecosia"
+			VALUENAME URL VALUE "https://www.ecosia.org/search?q={searchTerms}&addon=iegpo"
+			VALUENAME FaviconURL VALUE "https://cdn.ecosia.org/assets/images/ico/favicon.ico"
+			VALUENAME SuggestionsURL VALUE "http://api.bing.com/qsml.aspxhttp://api.bing.com/qsml.aspx?query={searchTerms}&maxwidth={ie:maxWidth}&rowheight={ie:rowHeight}&sectionHeight={ie:sectionHeight}&market={language}"
+		END ACTIONLISTON
+	END PART
+
+	PART "Bing"
+		CHECKBOX VALUENAME BingCheck
+		ACTIONLISTON
+			KEYNAME "Software\Policies\Microsoft\Internet Explorer\SearchScopes\{c57fc1ec-c39c-45a0-90d2-80423a969d1a}"
+			VALUENAME DisplayName VALUE "Bing"
+			VALUENAME FaviconURL VALUE "http://www.bing.com/favicon.ico"
+			VALUENAME FaviconURLFallback VALUE "http://www.bing.com/favicon.ico"
+			VALUENAME NTLogoPath VALUE "C:\Users\IEUser\AppData\LocalLow\Microsoft\Internet Explorer\Services\"
+			VALUENAME NTLogoURL VALUE "http://go.microsoft.com/fwlink/?LinkID=403856&language={language}&scale={scalelevel}&contrast={contrast}"
+			VALUENAME NTSuggestionsURL VALUE "http://api.bing.com/qsml.aspxhttp://api.bing.com/qsml.aspx?query={searchTerms}&market={language}&maxwidth={ie:maxWidth}&rowheight={ie:rowHeight}&sectionHeight={ie:sectionHeight}&FORM=IENTSS"
+			VALUENAME NTTopResultURL VALUE "http://www.bing.com/search?q={searchTerms}&src=IE-SearchBox&FORM=IENTTR"
+			VALUENAME NTURL VALUE "http://www.bing.com/search?q={searchTerms}&src=IE-SearchBox&FORM=IENTSR"
+			VALUENAME SuggestionsURL VALUE "http://api.bing.com/qsml.aspxhttp://api.bing.com/qsml.aspx?query={searchTerms}&maxwidth={ie:maxWidth}&rowheight={ie:rowHeight}&sectionHeight={ie:sectionHeight}&FORM=IESS02&market={language}"
+			VALUENAME SuggestionsURLFallback VALUE "http://api.bing.com/qsml.aspxhttp://api.bing.com/qsml.aspx?query={searchTerms}&maxwidth={ie:maxWidth}&rowheight={ie:rowHeight}&sectionHeight={ie:sectionHeight}&FORM=IESS02&market={language}"
+			VALUENAME TopResultURL VALUE "http://www.bing.com/search?q={searchTerms}&src=IE-TopResult&FORM=IETR02"
+			VALUENAME TopResultURLFallback VALUE "http://www.bing.com/search?q={searchTerms}&src=IE-TopResult&FORM=IETR02"
+			VALUENAME URL VALUE "http://www.bing.com/search?q={searchTerms}&src=IE-SearchBox&FORM=IESR02"
+		END ACTIONLISTON
+	END PART
+END POLICY
+END CATEGORY
+END CATEGORY
+
+[strings]
+SUPPORTED_IE7="At least Internet Explorer 7.0"
+WindowsComponents="Windows Components"
+InternetExplorer="Internet Explorer"
+PopulateSearchProviderList="Populate List of search providers"
+IE_Explain_PopulateSearchProviderList="This policy setting will let you populate a list of search providers that will be displayed in the Internet Explorer search box.\n\n If you enable this policy setting and if the "Restrict search providers to a specific list of search providers" Group Policy setting is enabled, this list will be the only list that appears in the Internet Explorer drop-down list. If the "Add a specific list of search providers to the user's search provider list" Group Policy setting is enabled, this list will be added to the user's list of search providers.\n\n If you disable this policy setting or do not configure it, users will have complete freedom to create their own search provider list."
